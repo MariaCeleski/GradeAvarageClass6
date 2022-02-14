@@ -58,30 +58,24 @@ namespace Grade_avarage
             Console.WriteLine("Você faltou: " + totalFaltas + " vezes");
 
             // (MÉDIA)>= 7 (APROVADO)  ()< 7 && >5 (recuperação) ()< 5 REPROVADO
-            // (FALTA) > 50 = (REPROVADO) 
+            // (FALTA) >= 50 = (REPROVADO) 
             
-            
+                       
+            if(totalFaltas >= 50)
+                 Console.WriteLine("Voce foi reprovado por falta, compareça mais no proximo semestre!");
 
-            if (media >= 7)
+            else   if (media >= 7)
             {
-                Console.WriteLine("Você esta Aprovado por nota");
-                if(media >= 7 && totalFaltas >= 50)
-                Console.WriteLine("mas está Reprovado por falta, compareça mais no proximo semestre!");
+                 Console.WriteLine("Você esta Aprovado");
             }
-            
-            if (media < 7 && media > 5)
-               
+            if (media > 5)
             {
-                Console.WriteLine("Você esta de Recuperação");
-                if(totalFaltas >= 50 && (media < 7 && media > 5))
-                Console.WriteLine("mas está Reprovado por falta, compareça mais no proximo semestre!");
+                 Console.WriteLine("Você esta de Recuperação");
             }
             
             if (media < 5 )
             {
-                Console.WriteLine("Você esta Reprovado");
-                if(totalFaltas >= 50 && media < 5)
-                Console.WriteLine("Você está Reprovado por falta e média, compareça mais no proximo semestre!");
+                 Console.WriteLine("Você esta Reprovado");
             }
                               
            
